@@ -1,0 +1,31 @@
+{
+	"generator-ng-component": {
+		"routeDirectory": "app/modules",
+		"directiveDirectory": "app/directives",
+		"componentDirectory": "app/components/",
+		"filterDirectory": "app/filters",
+		"serviceDirectory": "app/services",
+		"basePath": "app",
+		"moduleName": "ietaTraderApp",
+		"modulePrompt": false,
+		"filters": [
+			"uirouter",
+			"es6"
+		],
+		"extensions": [
+			"babel",
+			"js",
+			"html",
+			"less"
+		],
+		"directiveSimpleTemplates": "",
+		"directiveComplexTemplates": "",
+		"filterTemplates": "",
+		"serviceTemplates": "",
+		"factoryTemplates": "",
+		"controllerTemplates": "",
+		"decoratorTemplates": "",
+		"providerTemplates": "",
+		"routeTemplates": ""
+	}
+}

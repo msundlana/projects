@@ -1,0 +1,32 @@
+<div class="middle-box loginscreen animated fadeInDown">
+
+	<div class="ibox float-e-margins">
+		<div class="text-center">
+			<div class="ibox-title">Acme Bank Accounts System</div>
+		</div>
+		<div class="ibox-content">
+			<div class="row m-t">
+				<div class="col-md-12">
+					<p class="text-danger text-center" ng-if="$ctrl.authenticated == false">{{$ctrl.errorMessage}}</p>
+					<form role="form" ng-submit="$ctrl.login($ctrl.credentials)">
+						<div class="form-group">
+							<label>Username</label>
+							<input id="txt-username" ng-model="$ctrl.credentials.username" type="text"
+										 placeholder="Username" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input id="txt-password" ng-model="$ctrl.credentials.password" type="password"
+										 placeholder="Password" class="form-control">
+						</div>
+						<button id="btn-loginBtn" class="btn btn-primary block full-width m-t-lg" type="submit"
+										ng-disabled="$ctrl.loading" data-ng-hide="started" data-ng-click="start()">
+							<span><i class="fa fa-sign-in fa-fw fa-lg"></i>&nbsp;Log in</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

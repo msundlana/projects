@@ -1,0 +1,78 @@
+<div class="toolbar">
+	<div class="btn-group show-on-hover" id="show-on-hover">
+		<a id="btn-actionsMenu" type="button" class="toolbar-menu">
+			Action <span class="caret"></span>
+		</a>
+	</div>
+</div>
+<div class="ibox-content">
+	<div class="ibox float-e-margins">
+		<div class="ibox-content" role="form">
+
+			<div class="row text-danger">{{$ctrl.errorMessage}}</div>
+
+			<div class="row">
+				<div class="form-group col-md-4">
+					<label class="control-label">Account Holders ID</label>
+					<input id="txt-accountId" class="form-control" type="text"
+								 ng-model="$ctrl.accountQuery.accountId"/>
+				</div>
+				<div class="form-group col-md-4">
+					<label class="control-label">Account Type</label>
+					<select id="slct-accounType" class="form-control" ng-model="$ctrl.accountQuery.accountType">
+						<option value="0">Current Account</option>
+						<option value="1">Savings Account</option>
+					</select>
+				</div>
+				<div class="form-group col-md-4">
+					<label class="control-label">Amount</label>
+					<input id="txt-amount" class="form-control" type="text"
+								 ng-model="$ctrl.accountQuery.amount"/>
+				</div>
+			</div>
+
+			<div class="row button-holder">
+				<button id="btn-openAccountBtn" class="btn btn-success" ng-click="$ctrl.openAccount()">
+					<i class="fa fa-edit"></i>&nbsp;Open account
+				</button>
+				<button id="btn-getAccountsBtn" class="btn btn-success" ng-click="$ctrl.getAccounts()">
+					<i class="fa fa-envelope-o"></i>&nbsp;View accounts
+				</button>
+				<button id="btn-getAccountBtn" class="btn btn-success" ng-click="$ctrl.getAccount()">
+					<i class="fa fa-search"></i>&nbsp;Search account
+				</button>
+				<button id="btn-withdrawBtn" class="btn btn-success" ng-click="$ctrl.withdraw()">
+					<i class="fa fa-adjust"></i>&nbsp;Withdraw
+				</button>
+				<button id="btn-depositBtn" class="btn btn-success" ng-click="$ctrl.deposit()">
+					<i class="fa fa-adjust"></i>&nbsp;Deposit
+				</button>
+				<button id="btn-setOverDraftLimtBtn" class="btn btn-success" ng-click="$ctrl.setOverDraftLimt()">
+					<i class="fa fa-edit"></i>&nbsp;Set overdraft
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="ibox float-e-margins">
+		<div class="ibox-content">
+			<div class="declaration-content">
+				<table id="tbl-accounts" class="table table-striped table-hover table-responsive"
+							 bs-table-control="$ctrl.AccountsTableControl">
+					<thead class="ibox-header">
+					<tr>
+						<th>Account Holders ID</th>
+						<th>Account Type</th>
+						<th>Balance</th>
+						<th>Overdraft</th>
+					</tr>
+					</thead>
+					<tbody class="ibox-body">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).duScrollTopAnimated(0, 50);
+</script>

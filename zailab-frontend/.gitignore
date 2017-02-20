@@ -1,0 +1,14 @@
+grunt-maven.json
+node_modules
+bower_components
+dist
+.tmp
+.idea
+target
+protractor/reports
+coverage
+reports
+/.classpath
+/.project
+/zailab-accounts-app.iml
+/.settings/
